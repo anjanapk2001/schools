@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Page</title>
+    <style>
+        /* Add your CSS styles here for the new page */
+    </style>
+</head>
+<body>
+    <h1>Welcome to the New Page</h1>
+    <button id="openFormButton">Open Form</button>
+    <div id="formContainer" style="display: none;">
+        <h2>Form</h2>
+        <form id="form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <br><br>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male"> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <br><br>
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Biology Science">Biology Science</option>
+                <option value="Humanities">Humanities</option>
+                <option value="Literature">Literature</option>
+
+                <!-- Add more department options here -->
+            </select>
+            <br><br>
+        <label for="courses">Courses:</label>
+        <select id="courses" name="courses">
+            <option value="Data Science">Data Science</option>
+            <option value="Artificial intelligence">Artificial intelligence</option>
+            <option value="Software engineering">Software engineering</option>
+            <option value="BCom">BCom</option>
+            <option value="BBA">BBA</option>
+            <option value="Microbiology">Microbiology</option>
+            <option value="Biochemistry">Biochemistry</option>
+            <option value="Psychology">Psychology</option>
+            <option value="History">History</option>
+            <option value=" poetry"> poetry</option>
+            <option value="modern drama">modern drama</option>
+
+
+            <!-- Options for courses will be populated dynamically based on the selected department using JavaScript -->
+        </select><br><br>
+
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="purpose">
+            <option value="enquiry">For Enquiry</option>
+            <option value="order">For Registration</option>
+
+            <!-- Add more purpose options... -->
+        </select><br><br>
+
+        <label>Materials Provided:</label>
+        <input type="checkbox" id="notebook" name="materials" value="notebook">
+        <label for="notebook">Notebook</label>
+        <input type="checkbox" id="pen" name="materials" value="pen">
+        <label for="pen">Pen</label>
+        <input type="checkbox" id="exam-papers" name="materials" value="exam-papers">
+        <label for="exam-papers">Exam Papers</label><br>
+
+        <!-- Add more material options...<br><br> -->
+
+
+             <button type="button" class="btn btn-secondary"><a href="index">submit</a>
+            </button>
+
+        </form>
+
+
+    </div>
+
+
+
+    <script>
+        document.getElementById("openFormButton").addEventListener("click", function() {
+            document.getElementById("formContainer").style.display = "block";
+        });
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Handle form submission, validation, and message display here
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
